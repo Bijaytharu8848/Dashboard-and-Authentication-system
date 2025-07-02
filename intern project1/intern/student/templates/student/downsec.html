@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faculity</title>
+    <link rel="stylesheet" href="{% static 'student/css/edu.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+    <h2>Notes</h2>
+      {% for post in file %}
+            <div>
+                <h3>{{ post.subject }}</h3>
+                <a href="{% url 'download' post.adminupload.name %}">Download {{ post.subject }} File</a>
+            </div>
+        {% empty %}
+            <p>No files available.</p>
+        {% endfor %}
+</body>
+</html>

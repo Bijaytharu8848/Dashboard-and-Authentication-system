@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faculity</title>
+    <link rel="stylesheet" href="{% static 'student/css/edu.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+    <h2>faculity</h2>
+    <div><li><a href="{% url 'computer' %}">Computer</a></li></div>
+    <div><li><a href="{% url 'civil' %}">Civil</a></li></div>
+    <div><li><a href="{% url 'electronics' %}">Electronics</a></li></div>
+    </div>
+</body>
+</html>

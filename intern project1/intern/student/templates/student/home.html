@@ -1,0 +1,20 @@
+{% extends 'student/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'student/css/style.css' %}">
+
+{% endblock head %}
+
+{% block content %}
+    <div class="mains">
+        <h1>Start Your Journey</h1>
+        <h2>Empower your career with the perfect internship opportunities.
+            "Whether you're just starting your coding journey or you're a seasoned developer,
+             our platform is designed to connect passionate coders with real-world opportunities. 
+             Explore internships that challenge your skills, build your portfolio with meaningful projects
+             and grow alongside a community that values innovation, learning, and collaboration. Start coding your future today."
+        </h2>
+    </div>
+{% endblock content %}

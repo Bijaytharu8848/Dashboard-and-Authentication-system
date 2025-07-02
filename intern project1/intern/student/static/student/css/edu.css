@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h2{
+    text-align: center;
+}
+
+.container{
+    height: 400px;
+    width: 400px; 
+    padding: 5px;
+    border: 2px solid;
+    margin-left: 500px;
+}
+
+ a, li{
+    text-decoration: none;
+    list-style: none;
+    font-size: large;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,42 @@
+{% extends "student/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="contact">
+    <h3>Contact us</h3>
+    
+    <form action="" method="post" >
+        {% csrf_token %}
+        <div>
+        <label for="id_first_name">First Name:</label>  <input type="text" name="first_name" class="form-control" maxlength="150" id="id_first_name">  <small class="text-warning"> </small>
+        </div>
+        
+        
+        <div>
+        <label for="id_last_name">Last Name:</label>  <input type="text" name="last_name" class="form-control" maxlength="150" id="id_last_name">  <small class="text-warning"> </small>
+        </div>
+        
+         
+        <div>
+        <label for="id_username">Username:</label>  <input type="text" name="username" class="form-control" maxlength="150" autofocus required id="id_username">  <small class="text-warning"> </small>
+        </div>
+            
+        <div>
+        <label for="id_email">Email:</label>  <input type="email" name="email" class="form-control" maxlength="254" id="id_email">  <small class="text-warning"> </small>
+        </div>
+
+         
+        <div>
+        <label for="id_location">location:</label>  <input type="text" name="location" class="form-control" maxlength="150" autofocus required id="id_username">  <small class="text-warning"> </small>
+        </div>
+            
+        <br>
+        <input type="submit" value="Submit" class="btn">
+        
+    
+        
+    </form>
+</div>
+
+{% endblock content %}

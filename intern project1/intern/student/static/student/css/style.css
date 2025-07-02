@@ -1,0 +1,192 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin-top: 0px;
+    background-image: url("../image/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+   
+
+}
+.mynavbar li a {
+    color: whitesmoke;
+    
+}
+
+a{
+    text-decoration: none;
+}
+.mynavbar ul{
+    padding-left: 10px;
+    height: 50px;
+    background-color: #aa7bc3;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+
+
+li{
+    list-style-type: none;
+    display:inline;
+    margin-right: 50px;
+}
+
+.mains h1,h2 {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    
+}
+
+
+
+
+footer{
+    height: 50px;
+    width: 100%;
+    background-color: #aa7bc3;
+    text-align: center;
+    padding-top: 8px;
+    position:absolute;
+    bottom: 0px;
+    
+    
+}
+footer p,a {
+    color: black;
+}
+
+
+/* for about page */
+
+.mybody{
+    height: 100vh;
+    background-image: url("../image/about.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    
+
+}
+
+/* login */
+h3{
+    color: pink;
+    font-size: 40px;
+}
+
+.wrapper{
+    margin-top: 20px;
+    height: 310px;
+    width: 300px;
+    text-align: center;
+    color: pink;
+    border: 2px solid;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    padding-top: 50px;
+}
+
+.row{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form-group{
+    display: inline;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    border-radius: 5px;
+    
+}
+
+.btn{
+    background-color: #aa7bc3;
+    color: black;
+    height: 28px;
+    width: 55%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+/* signup */
+.signup{
+    height: 450px;
+    width: 400px;
+    margin-top: 30px;
+    padding-left: 20px;
+    text-align: center;
+    color: pink;
+    border: 2px solid;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+}
+
+.row{
+    padding-right: 60px;
+}
+
+
+.form-control{
+    height: 20px;
+    width: 230px;
+    padding-left: 30px;
+    margin-top: 28px;
+    
+}
+
+/* contact us */
+
+.contact{
+    margin-top: 20px;
+    height: 400px;
+    width: 30%;
+    text-align: center;
+    color: pink;
+    border: 2px solid;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+}
+
+/* Employee form */
+.box{
+    text-align: center;
+    height: 600px;
+    width: 500px;
+    background-color: #c1a0d3;
+    border-radius: 10px;
+    margin-left:35%;
+    margin-top: 10px;
+
+}
+.form-control {
+
+    margin-bottom: 5px;
+}
+
+.btn-add{
+    margin-top: 10px;
+    height: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: pink;
+    border-radius: 5px;
+    margin-left: 20px;
+}
