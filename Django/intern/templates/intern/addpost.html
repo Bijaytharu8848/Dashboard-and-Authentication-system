@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'intern/css/style.css' %}">
+    <title>Employee Form</title>
+</head>
+<body>
+    <div class="box">
+    <h3>Employee form</h3>
+    <form class="form-container" action="" method="post" novalidate enctype="multipart/form-data">
+     {% csrf_token %}
+     {{form.as_p}}
+     <input type="submit" value="Add" class="btn-add">
+     <a href="{% url 'dashboard' %}" class="btn-add">Cancell</a>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: gray;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .dashboard-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+        .action-buttons {
+            text-align: center;
+            padding: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-warning{
+            background-color: yellowgreen;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #f44336;
+            color: white;
+            text-align-last: right;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Employee Dashboard
+</header>
+
+<div class="dashboard-container">
+    <a href="{% url 'addpost' %}" class="btn btn-primary">Add post</a>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>College</th>
+                <th>Job_type</th>
+                <th>File</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>{{post.firstname }}</td>
+                <td>{{post.lastname}}</td>
+                <td>{{post.email}}</td>
+                <td>{{post.phone}}</td>
+                <td>{{post.location}}</td>
+                <td>{{post.college}}</td>
+                <td>{{post.job}}</td>
+                <td><a href="{{post.myfile.url}}" download="{{post.myfile}}">download</a></td>
+                <td><div class="action-buttons">
+                    <a href="{% url 'updatepost' post.id %}" class=" btn btn-warning ">Edit</a>
+                    <form action="{% url 'deletepost' post.id %}" method="post">
+                        {% csrf_token %}
+                        <br>
+                    <input type="submit" class=" btn btn-secondary" value="Delete">
+                    </form>
+                </div></td>
+            </tr>
+        
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+
+
+
+</body>
+</html>
+
+    

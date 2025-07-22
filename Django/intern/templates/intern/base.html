@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head> 
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <title>  {% block title %} {% endblock title %} </title>
+     
+<link rel="stylesheet" href="{% static 'intern/css/style.css' %}">
+{% endblock head %}
+</head>
+<body>
+    <header>
+      {% block header %}
+        {% include 'intern/navbar.html' %}
+      {% endblock header %}
+    </header>
+
+    
+    <main>
+        <div class="row">
+
+            {% block content %}{% endblock content %}
+        </div>
+    </main>
+    
+     {% comment %} <script src="{% static 'intern/js/bootstrap.js'%}"></script> {% endcomment %}
+     <script src="{% static 'intern/js/jquery.js'%}"></script>
+     <script src="{% static 'intern/js/popper.js'%}"></script>
+
+
+    <footer> {% block footer %} 
+        <p>&copy; 2024 Internship Program. All Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
+     {% endblock footer %} </footer>
+</body>
+</html>
