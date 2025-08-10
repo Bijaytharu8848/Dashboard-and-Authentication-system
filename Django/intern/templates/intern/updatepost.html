@@ -1,20 +1,16 @@
+{% extends "intern/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'intern/css/style.css' %}">
-    <title>Update post</title>
-</head>
-<body>
-    <div class="box">
-    <h3>Update post</h3>
-    <form class="form-container" action="" method="post" novalidate enctype="multipart/form-data">
+
+{% block content %}
+
+<div class="update-box">
+    <h3 class="heading">Update post</h3>
+
+<form action="" method="post" enctype="multipart/form-data" novalidate>
      {% csrf_token %}
      {{form.as_p}}
-     <input type="submit" value="Update" class="btn-add">
-     <a href="{% url 'dashboard' %}" class="btn-add">Cancell</a>
-    </form>
-    </div>
-</body>
+     <input type="submit" value="Update" class="updatebtn-add">
+     <a href="{% url 'dashboard' %}" class="updatebtn-cancell">Cancell</a>
+</form>
+</div>
+{% endblock content %}
