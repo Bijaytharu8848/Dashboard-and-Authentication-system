@@ -165,7 +165,7 @@ h3{
     backdrop-filter: blur(20px);
 }
 
-/* Employee form */
+/* Employee form  or addpost*/
 .box{
     text-align: center;
     height: 600px;
@@ -188,5 +188,49 @@ h3{
     padding-right: 40px;
     background-color: pink;
     border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* for update post */
+.heading{
+    color:whitesmoke;
+}
+
+
+.update-box{
+    text-align: center;
+    height: 550px;
+    width: 500px;
+    background-color: #c1a0d3;
+    border-radius: 10px;
+    margin-left:10%;
+    margin-top: 10px;
+
+}
+.form-control {
+
+    margin-bottom: 5px;
+}
+
+.updatebtn-add{
+    margin-top: 10px;
+    height: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: pink;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.updatebtn-cancell{
+    display: inline-block;
+    margin-top: 10px;
+    height: 23px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: pink;
+    border-radius: 5px;
+    border: 1px solid black;
     margin-left: 20px;
 }
