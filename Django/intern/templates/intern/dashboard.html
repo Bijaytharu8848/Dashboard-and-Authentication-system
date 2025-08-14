@@ -66,6 +66,9 @@
             color: white;
             text-align-last: right;
         }
+        a{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -76,6 +79,7 @@
 
 <div class="dashboard-container">
     <a href="{% url 'addpost' %}" class="btn btn-primary">Add post</a>
+    <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
     <table>
         <thead>
             <tr>
